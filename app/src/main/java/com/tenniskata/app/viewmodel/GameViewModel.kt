@@ -71,5 +71,8 @@ class GameViewModel : ViewModel() {
 
     fun doneNavigating() {
         _winnerName.value = null
+        playerOneScore = 0
+        playerTwoScore = 0
+        _scoreDescription.value = "Love"
     }
 }

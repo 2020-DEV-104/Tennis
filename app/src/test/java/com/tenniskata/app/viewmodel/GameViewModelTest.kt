@@ -406,12 +406,15 @@ class GameViewModelTest {
     }
 
     @Test
-    fun `doneNavigating() clears the winnerName LiveData value`() {
+    fun `doneNavigating() clears the winnerName LiveData value and the points`() {
         // Act
         sut.doneNavigating()
 
         // Assert
         assertEquals(null, sut.winnerName.value)
+        assertEquals(0, sut.playerOneScore)
+        assertEquals(0, sut.playerTwoScore)
+        assertEquals("Love", sut.scoreDescription.value)
     }
 
 }
