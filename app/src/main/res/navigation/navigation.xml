@@ -11,7 +11,7 @@
         android:label="@string/game_fragment"
         tools:layout="@layout/game_fragment">
         <action
-            android:id="@+id/action_searchResultsFragment_to_winnerFragment"
+            android:id="@+id/action_searchResultsFragment_to_WinnerFragment"
             app:destination="@id/winner_fragment"
             app:launchSingleTop="false"
             app:popUpTo="@id/search_results_fragment"
