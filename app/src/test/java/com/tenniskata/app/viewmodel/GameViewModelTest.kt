@@ -69,4 +69,47 @@ class GameViewModelTest {
         // Assert
         assertTrue(result)
     }
+
+
+    @Test
+    fun `if a player score is more than 4 he has won *(more rules apply)`() {
+        // Arrange
+        sut.playerOneScore = 1
+        sut.playerTwoScore = 4
+
+        // Act
+        val resultPlayerOne = sut.winsPlayerOne()
+        val resultPlayerTwo = sut.winsPlayerTwo()
+
+        // Assert
+        assertFalse(resultPlayerOne)
+        assertTrue(resultPlayerTwo)
+    }
+
+    @Test
+    fun `player One can not win if it has not two points of advantage`() {
+        // Arrange
+        sut.playerOneScore = 4
+        sut.playerTwoScore = 3
+
+        // Act
+        val resultPlayerOne = sut.winsPlayerOne()
+
+        // Assert
+        assertFalse(resultPlayerOne)
+    }
+
+    @Test
+    fun `player Two can not win if it has not two points of advantage`() {
+        // Arrange
+        sut.playerOneScore = 3
+        sut.playerTwoScore = 4
+
+        // Act
+        val resultPlayerTwo = sut.winsPlayerTwo()
+
+        // Assert
+        assertFalse(resultPlayerTwo)
+    }
+
 }

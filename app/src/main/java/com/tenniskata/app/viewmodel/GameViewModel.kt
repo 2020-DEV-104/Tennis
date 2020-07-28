@@ -8,4 +8,12 @@ class GameViewModel : ViewModel() {
 
     fun deuce() =
         playerOneScore >= 3 && playerTwoScore >= 3 && playerOneScore == playerTwoScore
+
+    fun winsPlayerOne(): Boolean {
+        return playerOneScore >= 4 && playerOneScore > playerTwoScore + 1
+    }
+
+    fun winsPlayerTwo(): Boolean {
+        return playerTwoScore >= 4 && playerTwoScore > playerOneScore + 1
+    }
 }
