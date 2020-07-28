@@ -20,6 +20,7 @@ class GameViewModel : ViewModel() {
     fun getScoreDescription(score: Int) = when (score) {
         1 -> "fifteen"
         2 -> "thirty"
+        3 -> "forty"
         else -> "love"
     }
 }
