@@ -68,4 +68,8 @@ class GameViewModel : ViewModel() {
         if (winsPlayerTwo())
             _winnerName.value = "two"
     }
+
+    fun doneNavigating() {
+        _winnerName.value = null
+    }
 }
