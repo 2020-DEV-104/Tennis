@@ -10,6 +10,22 @@
         android:name="com.tenniskata.app.ui.GameFragment"
         android:label="@string/game_fragment"
         tools:layout="@layout/game_fragment">
+        <action
+            android:id="@+id/action_searchResultsFragment_to_winnerFragment"
+            app:destination="@id/winner_fragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/search_results_fragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/winner_fragment"
+        android:name="com.tenniskata.app.ui.WinnerFragment"
+        android:label="@string/winner_fragment"
+        tools:layout="@layout/winner_fragment">
+        <argument
+            android:name="playerName"
+            app:argType="string" />
     </fragment>
 
 </navigation>
