@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class GameViewModel : ViewModel() {
     internal var playerOneScore = 0
     internal var playerTwoScore = 0
-    private val _scoreDescription: LiveData<String> = MutableLiveData<String>("love")
+    private val _scoreDescription = MutableLiveData<String>("love")
     val scoreDescription: LiveData<String> = _scoreDescription
 
     fun deuce() =
@@ -54,6 +54,7 @@ class GameViewModel : ViewModel() {
 
     fun playerOneScores() {
         playerOneScore++
+        _scoreDescription.value = getScoreboard()
     }
 
     fun playerTwoScores() {
