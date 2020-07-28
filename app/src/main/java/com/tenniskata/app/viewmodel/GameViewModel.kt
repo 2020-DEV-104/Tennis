@@ -23,4 +23,7 @@ class GameViewModel : ViewModel() {
         3 -> "forty"
         else -> "love"
     }
+
+    fun playerOneAdvantage() = playerOneScore >= 3 && playerTwoScore >= 3
+            && playerOneScore == playerTwoScore + 1
 }
