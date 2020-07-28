@@ -20,4 +20,13 @@ class GameViewModelTest {
         // Assert
         assertEquals(1, sut.playerOneScore)
     }
+
+    @Test
+    fun `viewModel stores player Two score`() {
+        // Act
+        sut.playerTwoScore = 2
+
+        // Assert
+        assertEquals(2, sut.playerTwoScore)
+    }
 }
