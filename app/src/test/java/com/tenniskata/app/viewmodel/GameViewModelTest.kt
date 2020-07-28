@@ -253,4 +253,17 @@ class GameViewModelTest {
         assertEquals("Player two wins", scoreboardText)
     }
 
+    @Test
+    fun `the score desciption is 'Deuce' if both players have the same points and at least 3 points`() {
+        // Arrange
+        sut.playerOneScore = 3
+        sut.playerTwoScore = 3
+
+        // Act
+        val scoreboardText = sut.getScoreboard()
+
+        // Assert
+        assertEquals("Deuce", scoreboardText)
+    }
+
 }
