@@ -367,4 +367,16 @@ class GameViewModelTest {
         assertNotEquals(initialValue, sut.scoreDescription.value)
     }
 
+    @Test
+    fun `the score description gets updated when player two scores`() {
+        // Arrange
+        val initialValue = sut.scoreDescription.value
+
+        // Act
+        sut.playerTwoScores()
+
+        // Assert
+        assertNotEquals(initialValue, sut.scoreDescription.value)
+    }
+
 }

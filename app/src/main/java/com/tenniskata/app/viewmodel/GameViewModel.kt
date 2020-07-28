@@ -59,5 +59,6 @@ class GameViewModel : ViewModel() {
 
     fun playerTwoScores() {
         playerTwoScore++
+        _scoreDescription.value = getScoreboard()
     }
 }
