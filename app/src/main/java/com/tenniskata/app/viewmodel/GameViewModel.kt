@@ -55,4 +55,8 @@ class GameViewModel : ViewModel() {
     fun playerOneScores() {
         playerOneScore++
     }
+
+    fun playerTwoScores() {
+        playerTwoScore++
+    }
 }
