@@ -10,6 +10,9 @@ class GameViewModel : ViewModel() {
     private val _scoreDescription = MutableLiveData<String>("Love")
     val scoreDescription: LiveData<String> = _scoreDescription
 
+    private val _winnerName = MutableLiveData<String>()
+    val winnerName: LiveData<String> = _winnerName
+
     fun deuce() =
         playerOneScore >= 3 && playerTwoScore >= 3 && playerOneScore == playerTwoScore
 
@@ -55,6 +58,8 @@ class GameViewModel : ViewModel() {
     fun playerOneScores() {
         playerOneScore++
         _scoreDescription.value = getScoreboard()
+        if (winsPlayerOne())
+            _winnerName.value = "one"
     }
 
     fun playerTwoScores() {
