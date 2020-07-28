@@ -3,5 +3,5 @@ package com.tenniskata.app.viewmodel
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+    internal var playerOneScore = 0
 }
