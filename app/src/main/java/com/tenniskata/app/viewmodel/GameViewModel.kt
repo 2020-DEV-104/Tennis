@@ -6,5 +6,6 @@ class GameViewModel : ViewModel() {
     internal var playerOneScore = 0
     internal var playerTwoScore = 0
 
-
+    fun deuce() =
+        playerOneScore >= 3 && playerTwoScore >= 3 && playerOneScore == playerTwoScore
 }
