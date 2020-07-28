@@ -16,4 +16,6 @@ class GameViewModel : ViewModel() {
     fun winsPlayerTwo(): Boolean {
         return playerTwoScore >= 4 && playerTwoScore > playerOneScore + 1
     }
+
+    fun getScoreDescription(score: Int) = "love"
 }

@@ -112,4 +112,13 @@ class GameViewModelTest {
         assertFalse(resultPlayerTwo)
     }
 
+    @Test
+    fun `score 0 is described as love`() {
+        // Act
+        val result = sut.getScoreDescription(0)
+
+        // Assert
+        assertEquals("love", result)
+    }
+
 }
