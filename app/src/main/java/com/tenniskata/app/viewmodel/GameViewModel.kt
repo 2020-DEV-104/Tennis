@@ -39,20 +39,15 @@ class GameViewModel : ViewModel() {
 
     fun hasWinner() = winsPlayerOne() || winsPlayerTwo()
     fun getScoreboard(): String {
-        return if (winsPlayerOne())
-            "Player one wins"
-        else if (winsPlayerTwo())
-            "Player two wins"
-        else if (deuce())
-            "Deuce"
-        else if (playerOneAdvantage())
-            "Advantage player one"
-        else if (playerTwoAdvantage())
-            "Advantage player two"
-        else if (playerOneScore == playerTwoScore)
-            getScoreDescription(playerOneScore)
-        else
-            getScoreDescription(playerOneScore) + " - " + getScoreDescription(playerTwoScore)
+        return when {
+            winsPlayerOne() -> "Player one wins"
+            winsPlayerTwo() -> "Player two wins"
+            deuce() -> "Deuce"
+            playerOneAdvantage() -> "Advantage player one"
+            playerTwoAdvantage() -> "Advantage player two"
+            playerOneScore == playerTwoScore -> getScoreDescription(playerOneScore)
+            else -> getScoreDescription(playerOneScore) + " - " + getScoreDescription(playerTwoScore)
+        }
     }
 
     fun playerOneScores() {
