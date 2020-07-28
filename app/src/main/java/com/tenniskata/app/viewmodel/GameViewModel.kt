@@ -41,7 +41,9 @@ class GameViewModel : ViewModel() {
             return "Deuce"
         else if (playerOneAdvantage())
             return "Advantage player one"
-        return "Advantage player two"
+        else if (playerTwoAdvantage())
+            return "Advantage player two"
+        return getScoreDescription(playerOneScore)
         throw IllegalStateException("Unknown score")
     }
 }
