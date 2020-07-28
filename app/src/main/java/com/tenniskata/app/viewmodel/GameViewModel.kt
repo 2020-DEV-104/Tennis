@@ -1,7 +1,6 @@
 package com.tenniskata.app.viewmodel
 
 import androidx.lifecycle.ViewModel
-import java.lang.IllegalStateException
 
 class GameViewModel : ViewModel() {
     internal var playerOneScore = 0
@@ -43,7 +42,9 @@ class GameViewModel : ViewModel() {
             return "Advantage player one"
         else if (playerTwoAdvantage())
             return "Advantage player two"
-        return getScoreDescription(playerOneScore)
-        throw IllegalStateException("Unknown score")
+        else if (playerOneScore == playerTwoScore)
+            return getScoreDescription(playerOneScore)
+        else
+            return getScoreDescription(playerOneScore) + " - " + getScoreDescription(playerTwoScore)
     }
 }

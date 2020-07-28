@@ -305,4 +305,17 @@ class GameViewModelTest {
         assertEquals(sut.getScoreDescription(sut.playerOneScore), scoreboardText)
     }
 
+    @Test
+    fun `the score desciption is getScoreDescription() - getScoreDescription() if both players have different points`() {
+        // Arrange
+        sut.playerOneScore = 0
+        sut.playerTwoScore = 2
+
+        // Act
+        val scoreboardText = sut.getScoreboard()
+
+        // Assert
+        assertEquals(sut.getScoreDescription(sut.playerOneScore) + " - " + sut.getScoreDescription(sut.playerTwoScore), scoreboardText)
+    }
+
 }
