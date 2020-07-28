@@ -122,12 +122,21 @@ class GameViewModelTest {
     }
 
     @Test
-    fun `score 1 is described as love`() {
+    fun `score 1 is described as fifteen`() {
         // Act
         val result = sut.getScoreDescription(1)
 
         // Assert
         assertEquals("fifteen", result)
+    }
+
+    @Test
+    fun `score 2 is described as thirty`() {
+        // Act
+        val result = sut.getScoreDescription(2)
+
+        // Assert
+        assertEquals("thirty", result)
     }
 
 }
