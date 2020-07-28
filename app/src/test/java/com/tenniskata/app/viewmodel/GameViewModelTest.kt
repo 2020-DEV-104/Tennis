@@ -392,4 +392,17 @@ class GameViewModelTest {
         assertEquals("one", sut.winnerName.value)
     }
 
+    @Test
+    fun `when a player two wins the winnerName has its 'name' (two)`() {
+        // Arrange
+        sut.playerOneScore = 0
+        sut.playerTwoScore = 3
+
+        // Act
+        sut.playerTwoScores()
+
+        // Assert
+        assertEquals("two", sut.winnerName.value)
+    }
+
 }

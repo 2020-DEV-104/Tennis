@@ -65,5 +65,7 @@ class GameViewModel : ViewModel() {
     fun playerTwoScores() {
         playerTwoScore++
         _scoreDescription.value = getScoreboard()
+        if (winsPlayerTwo())
+            _winnerName.value = "two"
     }
 }
