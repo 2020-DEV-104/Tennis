@@ -1,10 +1,14 @@
 package com.tenniskata.app.viewmodel
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
     internal var playerOneScore = 0
     internal var playerTwoScore = 0
+    private val _scoreDescription: LiveData<String> = MutableLiveData<String>("love")
+    val scoreDescription: LiveData<String> = _scoreDescription
 
     fun deuce() =
         playerOneScore >= 3 && playerTwoScore >= 3 && playerOneScore == playerTwoScore
@@ -32,19 +36,19 @@ class GameViewModel : ViewModel() {
 
     fun hasWinner() = winsPlayerOne() || winsPlayerTwo()
     fun getScoreboard(): String {
-        if (winsPlayerOne())
-            return "Player one wins"
+        return if (winsPlayerOne())
+            "Player one wins"
         else if (winsPlayerTwo())
-            return "Player two wins"
+            "Player two wins"
         else if (deuce())
-            return "Deuce"
+            "Deuce"
         else if (playerOneAdvantage())
-            return "Advantage player one"
+            "Advantage player one"
         else if (playerTwoAdvantage())
-            return "Advantage player two"
+            "Advantage player two"
         else if (playerOneScore == playerTwoScore)
-            return getScoreDescription(playerOneScore)
+            getScoreDescription(playerOneScore)
         else
-            return getScoreDescription(playerOneScore) + " - " + getScoreDescription(playerTwoScore)
+            getScoreDescription(playerOneScore) + " - " + getScoreDescription(playerTwoScore)
     }
 }

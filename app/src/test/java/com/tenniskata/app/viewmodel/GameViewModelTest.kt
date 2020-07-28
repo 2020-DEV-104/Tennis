@@ -318,4 +318,17 @@ class GameViewModelTest {
         assertEquals(sut.getScoreDescription(sut.playerOneScore) + " - " + sut.getScoreDescription(sut.playerTwoScore), scoreboardText)
     }
 
+    @Test
+    fun `viewModel stores the score description as livedata`() {
+        // Arrange
+        sut.playerOneScore = 0
+        sut.playerTwoScore = 0
+
+        // Act
+        val returned = sut.scoreDescription.value
+
+        // Assert
+        assertEquals(sut.getScoreboard(), returned)
+    }
+
 }
