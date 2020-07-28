@@ -51,4 +51,8 @@ class GameViewModel : ViewModel() {
         else
             getScoreDescription(playerOneScore) + " - " + getScoreDescription(playerTwoScore)
     }
+
+    fun playerOneScores() {
+        playerOneScore++
+    }
 }

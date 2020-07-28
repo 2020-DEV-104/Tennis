@@ -331,4 +331,16 @@ class GameViewModelTest {
         assertEquals(sut.getScoreboard(), returned)
     }
 
+    @Test
+    fun `player one can score`() {
+        // Arrange
+        sut.playerOneScore = 0
+
+        // Act
+        sut.playerOneScores()
+
+        // Assert
+        assertEquals(1, sut.playerOneScore)
+    }
+
 }
