@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class GameViewModel : ViewModel() {
     internal var playerOneScore = 0
     internal var playerTwoScore = 0
-    private val _scoreDescription = MutableLiveData<String>("love")
+    private val _scoreDescription = MutableLiveData<String>("Love")
     val scoreDescription: LiveData<String> = _scoreDescription
 
     fun deuce() =
@@ -22,10 +22,10 @@ class GameViewModel : ViewModel() {
     }
 
     fun getScoreDescription(score: Int) = when (score) {
-        1 -> "fifteen"
-        2 -> "thirty"
-        3 -> "forty"
-        else -> "love"
+        1 -> "Fifteen"
+        2 -> "Thirty"
+        3 -> "Forty"
+        else -> "Love"
     }
 
     fun playerOneAdvantage() = playerOneScore >= 3 && playerTwoScore >= 3

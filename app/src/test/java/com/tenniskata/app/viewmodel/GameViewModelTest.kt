@@ -118,7 +118,7 @@ class GameViewModelTest {
         val result = sut.getScoreDescription(0)
 
         // Assert
-        assertEquals("love", result)
+        assertEquals("Love", result)
     }
 
     @Test
@@ -127,7 +127,7 @@ class GameViewModelTest {
         val result = sut.getScoreDescription(1)
 
         // Assert
-        assertEquals("fifteen", result)
+        assertEquals("Fifteen", result)
     }
 
     @Test
@@ -136,7 +136,7 @@ class GameViewModelTest {
         val result = sut.getScoreDescription(2)
 
         // Assert
-        assertEquals("thirty", result)
+        assertEquals("Thirty", result)
     }
 
     @Test
@@ -145,7 +145,7 @@ class GameViewModelTest {
         val result = sut.getScoreDescription(3)
 
         // Assert
-        assertEquals("forty", result)
+        assertEquals("Forty", result)
     }
 
 
