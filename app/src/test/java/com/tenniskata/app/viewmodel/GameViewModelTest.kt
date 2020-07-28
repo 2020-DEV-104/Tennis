@@ -279,4 +279,17 @@ class GameViewModelTest {
         assertEquals("Advantage player one", scoreboardText)
     }
 
+    @Test
+    fun `the score desciption is 'Advantage player two' if player two has advantage`() {
+        // Arrange
+        sut.playerOneScore = 3
+        sut.playerTwoScore = 4
+
+        // Act
+        val scoreboardText = sut.getScoreboard()
+
+        // Assert
+        assertEquals("Advantage player two", scoreboardText)
+    }
+
 }
