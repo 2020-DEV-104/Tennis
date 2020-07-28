@@ -201,4 +201,30 @@ class GameViewModelTest {
         assertFalse(result)
     }
 
+    @Test
+    fun `the game has a winner if player one has won`() {
+        // Arrange
+        sut.playerOneScore = 4
+        sut.playerTwoScore = 0
+
+        // Act
+        val result = sut.hasWinner()
+
+        // Assert
+        assertTrue(result)
+    }
+
+    @Test
+    fun `the game has a winner if player two has won`() {
+        // Arrange
+        sut.playerOneScore = 0
+        sut.playerTwoScore = 4
+
+        // Act
+        val result = sut.hasWinner()
+
+        // Assert
+        assertTrue(result)
+    }
+
 }
