@@ -26,4 +26,7 @@ class GameViewModel : ViewModel() {
 
     fun playerOneAdvantage() = playerOneScore >= 3 && playerTwoScore >= 3
             && playerOneScore == playerTwoScore + 1
+
+    fun playerTwoAdvantage() = playerOneScore >= 3 && playerTwoScore >= 3
+            && playerOneScore + 1 == playerTwoScore
 }
