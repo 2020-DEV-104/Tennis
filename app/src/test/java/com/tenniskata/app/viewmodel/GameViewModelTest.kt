@@ -240,4 +240,17 @@ class GameViewModelTest {
         assertEquals("Player one wins", scoreboardText)
     }
 
+    @Test
+    fun `the score desciption is 'Player two wins' if player two has won`() {
+        // Arrange
+        sut.playerOneScore = 0
+        sut.playerTwoScore = 4
+
+        // Act
+        val scoreboardText = sut.getScoreboard()
+
+        // Assert
+        assertEquals("Player two wins", scoreboardText)
+    }
+
 }

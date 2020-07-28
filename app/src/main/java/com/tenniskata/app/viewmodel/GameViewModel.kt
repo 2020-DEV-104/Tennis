@@ -33,7 +33,9 @@ class GameViewModel : ViewModel() {
 
     fun hasWinner() = winsPlayerOne() || winsPlayerTwo()
     fun getScoreboard(): String {
-        return "Player one wins"
+        if (winsPlayerOne())
+            return "Player one wins"
+        return "Player two wins"
         throw IllegalStateException("Unknown score")
     }
 }
