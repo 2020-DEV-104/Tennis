@@ -1,6 +1,7 @@
 package com.tenniskata.app.viewmodel
 
 import androidx.lifecycle.ViewModel
+import java.lang.IllegalStateException
 
 class GameViewModel : ViewModel() {
     internal var playerOneScore = 0
@@ -31,4 +32,8 @@ class GameViewModel : ViewModel() {
             && playerOneScore + 1 == playerTwoScore
 
     fun hasWinner() = winsPlayerOne() || winsPlayerTwo()
+    fun getScoreboard(): String {
+        return "Player one wins"
+        throw IllegalStateException("Unknown score")
+    }
 }
