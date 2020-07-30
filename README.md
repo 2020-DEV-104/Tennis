@@ -29,11 +29,11 @@ Wait until gradle finishes and press the play button 🎾
 
 ## Screenshots
 	
-![https://paste.pics/9OT52](https://paste.pics/9OT52)
+![https://i.ibb.co/cTy6Cy4/Screenshot-1596087743.png](https://i.ibb.co/cTy6Cy4/Screenshot-1596087743.png)
 	
-![https://paste.pics/9OT59](https://paste.pics/9OT59)
+![https://i.ibb.co/Khffv5v/Screenshot-1596087748.png](https://i.ibb.co/Khffv5v/Screenshot-1596087748.png)
 	
-![https://paste.pics/9OT5H](https://paste.pics/9OT5H)
+![https://i.ibb.co/h7jbYZC/Screenshot-1596087753.png](https://i.ibb.co/h7jbYZC/Screenshot-1596087753.png)
 
 ### Libraries used
 
