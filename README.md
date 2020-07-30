@@ -4,7 +4,7 @@ This short and simple Kata about implementing a simple tennis game. It is inspir
 	
 Detailed instructions can be found in https://github.com/stephane-genicot/katas/blob/master/Tennis.md
 
-== Getting Started
+## Getting Started
 
 The project files can be found at https://github.com/jeprubio/Tennis-kata
 	
@@ -16,18 +16,18 @@ Another way to get the code is using git:
 	
 git clone git@github.com:jeprubio/Tennis-kata.git
 
-== Prerequisites
+## Prerequisites
 
 Android studio should be installed in order to run the app.
 
 Follow the instructions at https://developer.android.com/studio/install depending on which SO your computer is running.
 
-== How to run the application
+## How to run the application
 
 Open the code in android studio.
 Wait until gradle finishes and press the play button 🎾
 
-== Screenshots
+## Screenshots
 	
 ![https://i.ibb.co/txkbH0d/Screenshot-1596087743.png](https://i.ibb.co/txkbH0d/Screenshot-1596087743.png)
 
@@ -35,7 +35,7 @@ Wait until gradle finishes and press the play button 🎾
 	
 ![https://i.ibb.co/yfqFfSd/Screenshot-1596087753.png](https://i.ibb.co/yfqFfSd/Screenshot-1596087753.png)
 
-== Libraries used
+## Libraries used
 
 - [ConstraintLayout](https://developer.android.com/training/constraint-layout) - To create large and complex layouts with a flat view hierarchy (with better performance)
     
