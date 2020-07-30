@@ -18,33 +18,33 @@
 
 ## Prerequisites
 
-	Android studio should be installed in order to run the app.
+Android studio should be installed in order to run the app.
 
-	Follow the instructions at https://developer.android.com/studio/install depending on which SO your computer is running.
+Follow the instructions at https://developer.android.com/studio/install depending on which SO your computer is running.
 
 ## How to run the application
 
-    Open the code in android studio.
-	Wait until gradle finishes and press the play button 🎾
+Open the code in android studio.
+Wait until gradle finishes and press the play button 🎾
 
 ## Screenshots
 	
-	![https://paste.pics/9OT52](https://paste.pics/9OT52)
+![https://paste.pics/9OT52](https://paste.pics/9OT52)
 	
-	![https://paste.pics/9OT59](https://paste.pics/9OT59)
+![https://paste.pics/9OT59](https://paste.pics/9OT59)
 	
-	![https://paste.pics/9OT5H](https://paste.pics/9OT5H)
+![https://paste.pics/9OT5H](https://paste.pics/9OT5H)
 
 ### Libraries used
 
-	- [ConstraintLayout](https://developer.android.com/training/constraint-layout) - To create large and complex layouts with a flat view hierarchy (with better performance)
+- [ConstraintLayout](https://developer.android.com/training/constraint-layout) - To create large and complex layouts with a flat view hierarchy (with better performance)
     
-    - [Legacy-support-v4](https://developer.android.com/topic/libraries/support-library) - To use APIs that are either not available for older platform versions or utility APIs that aren't a part of the framework APIs.
+- [Legacy-support-v4](https://developer.android.com/topic/libraries/support-library) - To use APIs that are either not available for older platform versions or utility APIs that aren't a part of the framework APIs.
     
-    - [Lifecycle-viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel) - To use the the ViewModel class which is designed to store and manage UI-related data in a lifecycle conscious way
+- [Lifecycle-viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel) - To use the the ViewModel class which is designed to store and manage UI-related data in a lifecycle conscious way
     
-    - [Navigation](https://developer.android.com/guide/navigation) - To create a Single Activity App and handle fragment transactions defined in a graph.
+- [Navigation](https://developer.android.com/guide/navigation) - To create a Single Activity App and handle fragment transactions defined in a graph.
 
-    - [Mockk](https://mockk.io/) - A mocking library similar to mockito that allows you to mock suspend functions.
+- [Mockk](https://mockk.io/) - A mocking library similar to mockito that allows you to mock suspend functions.
 
 
